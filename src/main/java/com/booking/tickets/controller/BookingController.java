@@ -47,6 +47,7 @@ public class BookingController {
 	
 	@GetMapping("findAll")
 	public Iterable<Ticket> getAllTickets(){
+		System.out.println("Get all controller layer");
 		return bookingService.getAll();
 	}
 	
@@ -64,6 +65,7 @@ public class BookingController {
 	@PostMapping("SaveAllRecords")
 	public Iterable<Ticket> saveAll(@RequestBody Iterable<Ticket> tickets){
 		ArrayList<Ticket> al=new ArrayList<>();
+		System.out.println("I am in controller layer");
 //		al.add(new Ticket(101,"sunil","something@gmail.com","Amadalavalsa","Hyderabad"));
 //		al.add(new Ticket(102,"sunil","something@gmail.com","Amadalavalsa","Hyderabad"));
 //		al.add(new Ticket(103,"sunil","something@gmail.com","Amadalavalsa","Hyderabad"));

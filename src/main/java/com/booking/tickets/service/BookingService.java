@@ -39,6 +39,7 @@ public class BookingService {
 	}
 	
 	public Iterable<Ticket> getAll(){
+		System.out.println("I am in Srvice find all");
 		return bookingrepo.findAll();
 		//return null;	
 	}
@@ -48,6 +49,7 @@ public class BookingService {
 	}
 	
 	public Iterable<Ticket> saveALL(Iterable<Ticket> tickets){
+		System.out.println("I am in service layer");
 		return bookingrepo.saveAll(tickets);
 	}
 }
